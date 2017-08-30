@@ -1,0 +1,14 @@
+%YAML 1.2
+---
+import:
+  python: import
+lambda:
+  python: lambda
+
+a: true
+b: 5
+add:
+  x:
+    y:
+      python: x + y
+

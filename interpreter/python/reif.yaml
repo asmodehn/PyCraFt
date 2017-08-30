@@ -1,0 +1,34 @@
+%YAML 1.2
+---
+# default pyyaml mappings
+~: ~
+true: True
+false: False
+1: 1
+2: 2
+3: 3
+4: 4
+5: 5
+6: 6
+7: 7
+8: 8
+9: 9
+10: 10
+11: 11
+# etc. TODO until intmax
+
+
+import:
+  python: import
+lambda:
+  python: lambda
+
+
+
+a: true
+b: 5
+add:
+  x: arg1
+  y: arg2
+  python: x + y
+

@@ -12,5 +12,5 @@ def parse(filename):
 
 
 if __name__ == '__main__':
-    parse("examples/ground_types.yaml")
+    parse("examples/intr.yaml")
 
