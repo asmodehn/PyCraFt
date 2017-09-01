@@ -3,3 +3,19 @@
 import: envr.yaml
 
 
+
+
+intr:
+   \: x y z
+
+
+
+# tests
+intr:
+  - lambda:
+      kwargs:
+        x: local_x
+        y: local_y
+        z: local_z
+      return: local_x
+  - 42

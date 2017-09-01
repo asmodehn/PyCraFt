@@ -1,6 +1,7 @@
 
 import yaml
 import argparse
+import pprint
 
 
 def parse(filename):
@@ -8,9 +9,10 @@ def parse(filename):
     with open(filename, 'r') as f:
         ast = yaml.safe_load(f)
 
-    print(ast)
+    pprint.pprint(ast)
 
 
 if __name__ == '__main__':
-    parse("examples/intr.yaml")
+    parse("interpreter/type.yaml")
+    parse("interpreter/intr.yaml")
 
