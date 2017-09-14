@@ -1,23 +1,24 @@
 from __future__ import absolute_import, print_function, division, unicode_literals
 
-import ast
+from redbaron import RedBaron
 
 """
 Bootstrapping a functional language
+The Python Full Syntax Tree is our reified implementation
 """
 
 
 # reflect to bytes (for humans)
 def qut(sym):
-    return bytes(sym)  # ascii first...
+    return sym.dumps()  # ascii first...
 
 
 # reify to python
 # Note : this could be "sent" to another process
-# Note : types could be plugged in here...
+# Note : types/contracts could be plugged in here...
 def unq(lit, debug=False):
     if debug: print(lit)  # for debugging
-    return ast.literal_eval(lit)
+    return RedBaron(lit)
 
 
 # apply
@@ -27,7 +28,7 @@ def app(fun, arg):
 
 # abstract
 def lam(arg, bod):
-    return unq(ast.Lambda(arg, bod), True)
+    return unq('lambda '+ arg + ': ' + bod, True)
 
 
 # # eval
